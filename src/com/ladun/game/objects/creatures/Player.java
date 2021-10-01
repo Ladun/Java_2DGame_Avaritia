@@ -60,7 +60,7 @@ public class Player extends AliveObject {
 	//Other-------------------------------------------------------------------------
 	private float 		adrenalineTime;
 	private final int   adrenalineFTime = 10;
-	private float 		runSpeed 		= 150f * 5;
+	private float 		runSpeed 		= 150f;
 	private float 		walkSpeed		= 100f;
 	private float		curStamina		= 5;
 	private float		maxStamina		= 5;
@@ -685,7 +685,6 @@ public class Player extends AliveObject {
 		//----------------------------------------------------------------------------------
 		
 		r.drawImageTile(playerImage, (int)posX - GameManager.TS/2,(int)posY - GameManager.TS, (int)anim, animType);	
-		r.drawRect((int)posX - GameManager.TS/2,(int)posY - GameManager.TS, GameManager.TS, GameManager.TS, 0x00FF00);
 		r.drawLight(pLight, (int)posX + width / 2, (int)posY + height /2);
 		//----------------------------------------------------------------------------------
 		

@@ -8,6 +8,7 @@ import com.ladun.engine.Renderer;
 import com.ladun.engine.gfx.ImageTile;
 import com.ladun.game.GameManager;
 import com.ladun.game.Scene.InGameScene;
+import com.ladun.game.components.AABBComponent;
 import com.ladun.game.objects.GameObject;
 import com.ladun.game.objects.particles.ParticleSystem;
 
@@ -22,7 +23,12 @@ public class Observer extends GameObject{
 		this.tag	= "observer";
 		this.posX 	= posX;
 		this.posY 	= posY;
+		this.width 	= 5;
+		this.height = 5;
 		this.active = false;
+
+		
+		this.addComponent(new AABBComponent(this));
 	}
 	
 	private void ParticleTest(GameContainer gc)
@@ -101,7 +107,8 @@ public class Observer extends GameObject{
 			speed = 100;
 		
 		ParticleTest(gc);
-			
+
+		this.updateComponents(gc, dt);
 	}
 	
 
@@ -109,6 +116,8 @@ public class Observer extends GameObject{
 	public void render(GameContainer gc, Renderer r) {
 		// TODO Auto-generated method stub
 		r.drawFillRect((int)posX, (int)posY, 5, 5, 0xffff00ff);
+		
+		this.renderComponents(gc, r);
 	}
 
 	@Override

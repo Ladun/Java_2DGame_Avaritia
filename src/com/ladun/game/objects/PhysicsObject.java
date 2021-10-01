@@ -34,7 +34,7 @@ public class PhysicsObject extends GameObject{
 	@Override
 	public void collision(GameObject other) {
 		// TODO Auto-generated method stub
-		if(other.getTag().equalsIgnoreCase("player"))
+		if(other.getTag().equalsIgnoreCase("player") || other.getTag().equalsIgnoreCase("observer"))
 		{
 			collided = true;
 		}
