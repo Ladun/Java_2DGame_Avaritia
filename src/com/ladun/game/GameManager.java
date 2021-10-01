@@ -30,7 +30,7 @@ public class GameManager extends AbstractGame {
 	
 
 	//Static Variable-----------------------------------------------
-	public 	static final 	int 			TS 				= 64;
+	public 	static final 	int 			TS 				= 32;
 	public 	static 			boolean 		isDebugMode 	= true;
 	private static 			GameContainer 	gc;
 	

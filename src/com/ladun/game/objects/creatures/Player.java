@@ -29,7 +29,7 @@ public class Player extends AliveObject {
 	public enum AnimState {IDLE,WALK,RUN,INJUMP,PISTOL,ASLF,ATTACK,DEAD,SHOTGUN,ROLL,BAZOOKA};
 	
 	
-	private ImageTile 	playerImage 	= new ImageTile("/Resources/Object/Creatures/Character.png",128,128);
+	private ImageTile 	playerImage 	= new ImageTile("/Resources/Object/Creatures/Character.png",64,64);
 	private Light 		pLight;
 	private Light		shootLight;
 	
@@ -685,6 +685,7 @@ public class Player extends AliveObject {
 		//----------------------------------------------------------------------------------
 		
 		r.drawImageTile(playerImage, (int)posX - GameManager.TS/2,(int)posY - GameManager.TS, (int)anim, animType);	
+		r.drawRect((int)posX - GameManager.TS/2,(int)posY - GameManager.TS, GameManager.TS, GameManager.TS, 0x00FF00);
 		r.drawLight(pLight, (int)posX + width / 2, (int)posY + height /2);
 		//----------------------------------------------------------------------------------
 		

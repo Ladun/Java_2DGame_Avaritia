@@ -22,7 +22,7 @@ public class InGameScene extends AbstractScene{
 	public	static int 		DAWN_COLOR 				= 0xff515263;
 	public	static int 		DAY_COLOR				= 0xffffffff;
 	
-	public 	static String 	START_MAP_NAME			= "TestMap";
+	public 	static String 	START_MAP_NAME			= "City1";
 	
 	
 	private int 		currentBackground	= NIGHT_BACKGROUND_COLOR;//0xffa1ece7;	
